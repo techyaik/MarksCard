@@ -61,6 +61,12 @@ body {
     flex-direction: column;
 }
 
+.page-2 {
+    border: 5px solid var(--dark-green);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
 /* --- PAGE 1: LEFT HALF (Back Cover) --- */
 .left-half .grading-section {
     margin-bottom: 25px;
@@ -509,36 +515,44 @@ body {
 
 /* --- PAGE 2: COMMON TABLE STYLES --- */
 .content-box {
-    border: 2px solid var(--dark-green);
-    border-radius: 12px;
     position: relative;
-    padding: 20px 10px 10px 10px;
-    background: var(--bg-color);
+    padding: 0;
+    margin-bottom: 25px;
+    border: none;
+    background: transparent;
 }
 
 .box-pill {
-    position: absolute;
-    top: -14px;
-    left: 20px;
-    font-size: 12px;
+    background-color: var(--dark-green);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 5px 20px;
+    border-radius: 6px 15px 0 0;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 12px;
+    font-size: 11.5px;
     font-family: 'Georgia', serif;
 }
 
 th,
 td {
-    border: 1px solid var(--border-color);
-    padding: 3px 5px;
+    border: 1px solid #111;
+    padding: 4px 5px;
     text-align: center;
 }
 
 th {
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
+    font-size: 10.5px;
+    text-transform: uppercase;
 }
 
 .left-align {
@@ -546,8 +560,7 @@ th {
 }
 
 .term-col {
-    background-color: #f0f0f0;
-    /* Slight gray background to distinguish */
+    background-color: transparent;
 }
 
 .mb-large {
@@ -564,18 +577,18 @@ th {
 }
 
 .academic-table {
-    margin-top: 5px;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 .academic-table th {
     background: white;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .narrow-col {
     width: 35px;
-    font-size: 10px !important;
+    font-size: 9px !important;
     line-height: 1.1;
 }
 
@@ -596,7 +609,7 @@ th {
 }
 
 .co-scholastic-table th {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .co-scholastic-table td {
@@ -612,7 +625,7 @@ th {
 .attendance-table th,
 .health-table th,
 .signature-table th {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .skills-table td,
@@ -627,26 +640,37 @@ th {
 
 .remarks-box {
     padding-bottom: 0;
+    text-align: center;
 }
 
 .remarks-pill {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    padding: 5px 30px;
+    background-color: var(--dark-green);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 6px 120px;
+    border-radius: 4px 4px 0 0;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 .remarks-table {
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 10px;
-    border: none;
+    border: 1px solid #111;
 }
 
 .remarks-table td {
-    border: none;
-    padding: 5px;
+    border: 1px solid #111;
+    padding: 10px 5px;
+}
+
+.remarks-table .term-label {
+    width: 60px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 11px;
 }
 
 .term-label {
