@@ -1,0 +1,664 @@
+:root {
+    --dark-green: #0a4030;
+    --light-green: #e6f0eb;
+    --border-color: #333;
+    --bg-color: #fcf8ee;
+    --text-color: #111;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #e0e0e0;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Page Setup */
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+.a4-landscape {
+    width: 297mm;
+    height: 210mm;
+    background: linear-gradient(135deg, #f3e9d8 0%, #fcf8ee 40%, #fcf8ee 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background-color: transparent;
+        gap: 0;
+    }
+
+    .a4-landscape {
+        box-shadow: none;
+    }
+}
+
+.page-half {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding: 12mm 15mm;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- PAGE 1: LEFT HALF (Back Cover) --- */
+.left-half .grading-section {
+    margin-bottom: 25px;
+    margin-top: 15px;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pill-title-container {
+    text-align: center;
+    margin-bottom: 12px;
+    /* space between pill and table box */
+}
+
+.pill-title {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 8px 30px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.grading-table-container {
+    background-color: white;
+    /* creates the white gap */
+    padding: 8px;
+    /* the white gap size */
+    border: 3px solid var(--dark-green);
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* subtle shadow for the outer box */
+}
+
+.grading-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    text-align: center;
+    background: white;
+    /* Soft glowing shadow around the table */
+    box-shadow: 0 0 10px 3px rgba(215, 225, 175, 0.7);
+}
+
+.grading-table th {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grading-table td {
+    padding: 10px 6px;
+    /* Simulate the thick blurry gold-green line */
+    border-bottom: 3px solid #dfebca;
+}
+
+.grading-table tr:last-child td {
+    border-bottom: none;
+}
+
+.grading-table tr:nth-child(even) {
+    background-color: white;
+}
+
+.grading-table th:first-child,
+.grading-table td:first-child {
+    text-align: center;
+    width: 30%;
+}
+
+.grading-table th:nth-child(2),
+.grading-table td:nth-child(2) {
+    text-align: center;
+    font-weight: normal;
+    width: 20%;
+}
+
+.grading-table th:last-child,
+.grading-table td:last-child {
+    text-align: left;
+    width: 50%;
+}
+
+.promotion-info {
+    margin-bottom: 25px;
+    padding-left: 5px;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.promotion-row {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.promotion-row .label {
+    white-space: nowrap;
+    margin-right: 3px;
+    color: #111;
+}
+
+.promotion-row .dots {
+    border-bottom: 2px dotted #111;
+    flex: 1;
+    height: 18px;
+    /* aligns dots nicely with the baseline of text */
+}
+
+
+.school-photo-container {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.school-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    width: 110px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.tree-logo-img {
+    width: 95%;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+    margin-bottom: -1px;
+    z-index: 2;
+    position: relative;
+}
+
+.footer-pencil-svg {
+    height: 10px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.footer-motto {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    color: #1a1a1a;
+    letter-spacing: 0px;
+}
+
+.footer-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    flex-shrink: 0;
+}
+
+.school-name-footer {
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 34px;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0px;
+    margin-bottom: -5px;
+    /* pull the address closer to the name */
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    line-height: 1;
+}
+
+.olive-svg {
+    display: block;
+    width: 32px;
+    height: 36px;
+    margin-right: -4px;
+    /* pull 'live' closer */
+    margin-top: 4px;
+    z-index: 1;
+    position: relative;
+}
+
+.text-rest-container {
+    position: relative;
+    display: inline-block;
+}
+
+.text-rest-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-text-stroke: 5px #F9F6ED;
+    color: #F9F6ED;
+    white-space: nowrap;
+}
+
+.text-rest {
+    z-index: 3;
+    position: relative;
+    white-space: nowrap;
+}
+
+.footer-details .address {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 4px;
+    letter-spacing: 0px;
+    white-space: nowrap;
+}
+
+.contact-info {
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.contact-icons-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 5px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.contact-item .icon {
+    margin-right: 3px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.icon {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+
+
+/* --- PAGE 1: RIGHT HALF (Front Cover) --- */
+.right-half {
+    align-items: center;
+    padding-top: 25mm;
+}
+
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at right center, rgba(160, 190, 170, 0.1) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.header-section {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curved-text-svg {
+    width: 450px;
+    height: 162px;
+    position: absolute;
+    top: -60px;
+    z-index: 2;
+    overflow: visible;
+}
+
+.curved-text-main {
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 52px;
+    fill: #1a1a1a;
+}
+
+.curved-text-outline {
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 52px;
+    fill: transparent;
+    stroke: #F9F6ED;
+    stroke-width: 8px;
+    stroke-linejoin: round;
+}
+
+.main-logo-container {
+    position: relative;
+    width: 140px;
+    margin-top: 40px;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+}
+
+.logo-overlay-text {
+    position: absolute;
+    bottom: 25px;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo-olive {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #a4b045;
+    /* olive color */
+    line-height: 0.8;
+}
+
+.logo-public {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #222;
+}
+
+.pencil-motto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.main-pencil {
+    width: 180px;
+}
+
+.motto {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.report-title {
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 25px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.std-subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.session-info {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.student-details-box {
+    width: 95%;
+    border: 4px solid var(--dark-green);
+    border-radius: 16px;
+    padding: 18px 22px;
+    z-index: 1;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 15px;
+}
+
+.form-row {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 13.5px;
+    color: #1a1a1a;
+}
+
+.form-row .label {
+    white-space: nowrap;
+    margin-right: 4px;
+}
+
+.form-row .dots {
+    border-bottom: 2px dotted #1a1a1a;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* --- PAGE 2: COMMON TABLE STYLES --- */
+.content-box {
+    border: 2px solid var(--dark-green);
+    border-radius: 12px;
+    position: relative;
+    padding: 20px 10px 10px 10px;
+    background: var(--bg-color);
+}
+
+.box-pill {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: 'Georgia', serif;
+}
+
+th,
+td {
+    border: 1px solid var(--border-color);
+    padding: 3px 5px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.term-col {
+    background-color: #f0f0f0;
+    /* Slight gray background to distinguish */
+}
+
+.mb-large {
+    margin-bottom: 25px;
+}
+
+.mt-medium {
+    margin-top: 15px;
+}
+
+/* --- PAGE 2: LEFT HALF --- */
+.page-2 .left-half {
+    padding-top: 15mm;
+}
+
+.academic-table {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.academic-table th {
+    background: white;
+    font-size: 11px;
+}
+
+.narrow-col {
+    width: 35px;
+    font-size: 10px !important;
+    line-height: 1.1;
+}
+
+.subject-col {
+    width: 130px;
+}
+
+.academic-table td {
+    height: 18px;
+}
+
+.bold-row td {
+    font-weight: bold;
+}
+
+.co-scholastic-table {
+    margin-top: 5px;
+}
+
+.co-scholastic-table th {
+    font-size: 11px;
+}
+
+.co-scholastic-table td {
+    height: 20px;
+}
+
+/* --- PAGE 2: RIGHT HALF --- */
+.page-2 .right-half {
+    padding-top: 15mm;
+}
+
+.skills-table th,
+.attendance-table th,
+.health-table th,
+.signature-table th {
+    font-size: 11px;
+}
+
+.skills-table td,
+.attendance-table td,
+.health-table td {
+    height: 20px;
+}
+
+.signature-table td {
+    height: 25px;
+}
+
+.remarks-box {
+    padding-bottom: 0;
+}
+
+.remarks-pill {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    padding: 5px 30px;
+}
+
+.remarks-table {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.remarks-table td {
+    border: none;
+    padding: 5px;
+}
+
+.term-label {
+    width: 80px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #eee;
+    border: 1px solid var(--border-color) !important;
+}
+
+.remarks-input {
+    border: 1px solid var(--border-color) !important;
+    height: 50px;
+}
