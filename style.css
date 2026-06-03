@@ -384,13 +384,15 @@ body {
 
 .curved-text-main {
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-    font-size: 52px;
+    font-size: 64px;
+    font-weight: bold;
     fill: #1a1a1a;
 }
 
 .curved-text-outline {
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-    font-size: 52px;
+    font-size: 64px;
+    font-weight: bold;
     fill: transparent;
     stroke: #F9F6ED;
     stroke-width: 8px;
@@ -527,8 +529,8 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 11px;
-    padding: 5px 20px;
+    font-size: 13px;
+    padding: 6px 20px;
     border-radius: 6px 15px 0 0;
     display: inline-block;
     margin-bottom: 0;
@@ -537,8 +539,13 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 11.5px;
+    font-size: 13px;
     font-family: 'Georgia', serif;
+    border: 2px solid #111;
+}
+
+thead tr:last-child th {
+    border-bottom: 2px solid #111;
 }
 
 th,
@@ -551,61 +558,79 @@ td {
 th {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    font-size: 10.5px;
+    font-size: 11.5px;
     text-transform: uppercase;
+    background-color: #e4e4e4;
 }
 
 .left-align {
     text-align: left;
+    white-space: nowrap;
 }
 
 .term-col {
-    background-color: transparent;
+    background-color: #fdf2e3 !important;
 }
 
 .mb-large {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .mt-medium {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 /* --- PAGE 2: LEFT HALF --- */
 .page-2 .left-half {
-    padding-top: 15mm;
+    width: 61%;
+    padding-top: 10mm;
 }
 
 .academic-table {
+    table-layout: fixed;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .academic-table th {
-    background: white;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .narrow-col {
-    width: 35px;
-    font-size: 9px !important;
+    width: 7.2%;
+    font-size: 10px !important;
     line-height: 1.1;
+    overflow: hidden;
 }
 
 .subject-col {
-    width: 130px;
+    width: 28%;
 }
 
 .academic-table td {
-    height: 18px;
+    padding: 3px 5px;
 }
 
 .bold-row td {
     font-weight: bold;
+    background-color: #e4e4e4;
 }
 
 .co-scholastic-table {
+    table-layout: fixed;
+    width: 100%;
     margin-top: 5px;
+}
+
+.co-scholastic-table th:nth-child(1) {
+    width: 28%;
+}
+.co-scholastic-table th:nth-child(2) {
+    width: 28.8%;
+}
+.co-scholastic-table th:nth-child(3) {
+    width: 43.2%;
 }
 
 .co-scholastic-table th {
@@ -613,29 +638,57 @@ th {
 }
 
 .co-scholastic-table td {
-    height: 20px;
+    padding: 3px 5px;
 }
 
 /* --- PAGE 2: RIGHT HALF --- */
 .page-2 .right-half {
-    padding-top: 15mm;
+    width: 39%;
+    padding-top: 10mm;
+}
+
+.skills-table,
+.attendance-table,
+.health-table,
+.signature-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.skills-table th:nth-child(1),
+.attendance-table th:nth-child(1),
+.health-table th:nth-child(1) {
+    width: 45%;
+}
+
+.signature-table th:nth-child(1) {
+    width: 32%;
+}
+
+.skills-table th:nth-child(2),
+.skills-table th:nth-child(3),
+.attendance-table th:nth-child(2),
+.attendance-table th:nth-child(3),
+.health-table th:nth-child(2),
+.health-table th:nth-child(3) {
+    width: 27.5%;
 }
 
 .skills-table th,
 .attendance-table th,
 .health-table th,
 .signature-table th {
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .skills-table td,
 .attendance-table td,
 .health-table td {
-    height: 20px;
+    padding: 3px 5px;
 }
 
 .signature-table td {
-    height: 25px;
+    padding: 5px 5px;
 }
 
 .remarks-box {
@@ -648,7 +701,7 @@ th {
     color: white;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 13px;
     padding: 6px 120px;
     border-radius: 4px 4px 0 0;
     display: inline-block;
@@ -670,7 +723,7 @@ th {
     width: 60px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .term-label {
@@ -678,11 +731,11 @@ th {
     font-weight: bold;
     text-align: center;
     vertical-align: middle;
-    background-color: #eee;
+    background-color: #e4e4e4;
     border: 1px solid var(--border-color) !important;
 }
 
 .remarks-input {
     border: 1px solid var(--border-color) !important;
-    height: 50px;
+    height: 40px;
 }
