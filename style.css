@@ -193,7 +193,7 @@ body {
 .school-photo-container {
     width: 100%;
     height: 120px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     overflow: hidden;
     border: 2px solid white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -208,61 +208,47 @@ body {
 .footer-info {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: auto;
     font-family: 'Arial', sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .footer-logo {
-    width: 110px;
+    width: 90px;
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-right: 20px;
+    justify-content: center;
+    margin-right: 15px;
 }
 
 .tree-logo-img {
-    width: 95%;
+    width: 100%;
     height: auto;
     flex-shrink: 0;
     display: block;
-    margin-bottom: -1px;
     z-index: 2;
     position: relative;
 }
 
-.footer-pencil-svg {
-    height: 10px;
-    display: block;
-    margin-bottom: 2px;
-}
 
-.footer-motto {
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 10px;
-    text-align: center;
-    color: #1a1a1a;
-    letter-spacing: 0px;
-}
 
 .footer-details {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 0px;
     flex-shrink: 0;
 }
 
 .school-name-footer {
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-    font-size: 34px;
+    font-size: 38px;
     color: #1a1a1a;
     display: flex;
     align-items: center;
     letter-spacing: 0px;
-    margin-bottom: -5px;
+    margin-bottom: 3px;
     /* pull the address closer to the name */
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
     line-height: 1;
@@ -271,10 +257,9 @@ body {
 .olive-svg {
     display: block;
     width: 32px;
-    height: 36px;
-    margin-right: -4px;
-    /* pull 'live' closer */
-    margin-top: 4px;
+    height: 35px;
+    margin-right: 4px;
+    margin-top: 2px;
     z-index: 1;
     position: relative;
 }
@@ -289,7 +274,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    -webkit-text-stroke: 5px #F9F6ED;
+    -webkit-text-stroke: 4px #F9F6ED;
     color: #F9F6ED;
     white-space: nowrap;
 }
@@ -302,7 +287,7 @@ body {
 
 .footer-details .address {
     font-family: 'Arial', sans-serif;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: bold;
     color: #222;
     margin-bottom: 4px;
@@ -312,7 +297,7 @@ body {
 
 .contact-info {
     font-family: 'Arial', sans-serif;
-    font-size: 8px;
+    font-size: 9px;
     color: #222;
     display: flex;
     align-items: center;
@@ -384,14 +369,14 @@ body {
 
 .curved-text-main {
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-    font-size: 64px;
+    font-size: 56px;
     font-weight: bold;
     fill: #1a1a1a;
 }
 
 .curved-text-outline {
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
-    font-size: 64px;
+    font-size: 56px;
     font-weight: bold;
     fill: transparent;
     stroke: #F9F6ED;
@@ -401,7 +386,7 @@ body {
 
 .main-logo-container {
     position: relative;
-    width: 140px;
+    width: 220px;
     margin-top: 40px;
 }
 
@@ -440,11 +425,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .main-pencil {
-    width: 180px;
+    width: 220px;
 }
 
 .motto {
@@ -457,7 +442,7 @@ body {
 
 .report-title {
     font-family: 'Georgia', serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     margin-top: 25px;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
@@ -465,14 +450,14 @@ body {
 
 .std-subtitle {
     font-family: 'Georgia', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     margin-top: 5px;
 }
 
 .session-info {
     font-family: 'Georgia', serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -626,9 +611,11 @@ th {
 .co-scholastic-table th:nth-child(1) {
     width: 28%;
 }
+
 .co-scholastic-table th:nth-child(2) {
     width: 28.8%;
 }
+
 .co-scholastic-table th:nth-child(3) {
     width: 43.2%;
 }
